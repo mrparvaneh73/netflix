@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.netflix.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.netflix.HomeFragment"
+        android:label="HomeFragment" >
+        <argument
+            android:name="fullname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.netflix.FavoriteFragment"
+        android:label="FavoriteFragment" >
+        <argument
+            android:name="fullname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="com.example.netflix.ComingSoonFragment"
+        android:label="ComingSoonFragment" >
+        <argument
+            android:name="fullname"
+            app:argType="string" />
+    </fragment>
+</navigation>
