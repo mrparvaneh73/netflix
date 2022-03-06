@@ -1,3 +1,9 @@
 package com.example.netflix
 
-data class Movies(var movieimage:Int,var moviename:String,var likebuttom:Int)
+import android.widget.ImageButton
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
+
+data class Movies(var movieimage:Int,var moviename:String,var movielikebuttom:Int,var isliked:Boolean){
+}
