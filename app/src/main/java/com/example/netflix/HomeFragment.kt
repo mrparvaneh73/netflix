@@ -31,9 +31,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         return binding.root
     }
 
+
+    @SuppressLint("NotifyDataSetChanged")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        recyclerView = view.findViewById(R.id.recyclerview)
+        recyclerView.layoutManager = GridLayoutManager(view.context, 3)
         val adapter = Myadapter(viewmodel.moviesArrayList){
             it.isliked= it.isliked.not()
             if (it.isliked==false){
@@ -41,10 +45,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }else{
                 it.movielikebuttom=R.drawable.heartbuttom_red
             }
-            Toast.makeText(requireContext(), "${viewmodel.movies.isliked}", Toast.LENGTH_SHORT).show()
+
+            recyclerView.adapter?.notifyDataSetChanged()
         }
-        recyclerView = view.findViewById(R.id.recyclerview)
-        recyclerView.layoutManager = GridLayoutManager(view.context, 3)
+//        recyclerView.adapter?.notifyDataSetChanged()
         recyclerView.adapter = adapter
     }
 

@@ -22,7 +22,7 @@ class Myadapter(private var movielist: ArrayList<Movies> , private var clickList
         val movieImage: ImageView = itemView.findViewById(R.id.movie_image)
         val movieName: TextView = itemView.findViewById(R.id.movie_name)
         var movielike:ImageButton=itemView.findViewById(R.id.movie_like_buttom)
-        var binding: ListItemBinding = DataBindingUtil.bind(itemView)!!
+
         init {
 
 
