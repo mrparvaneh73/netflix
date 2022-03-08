@@ -1,21 +1,16 @@
-package com.example.netflix
+package com.example.netflix.ui
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
-import com.example.netflix.databinding.ListItemBinding
+import com.example.netflix.R
+import com.example.netflix.model.Movies
 
-class Myadapter(private var movielist: ArrayList<Movies> , private var clickListener:(Movies) -> Unit) :
+class Myadapter(private var movielist: ArrayList<Movies>, private var clickListener:(Movies) -> Unit) :
     RecyclerView.Adapter<Myadapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View,clickposition: (Int) ->Unit) : RecyclerView.ViewHolder(itemView) {

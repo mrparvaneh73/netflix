@@ -1,20 +1,19 @@
-package com.example.netflix
+package com.example.netflix.ui.favorite
 
 import android.annotation.SuppressLint
-import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.netflix.ui.Appviewmodel
+import com.example.netflix.ui.Myadapter
+import com.example.netflix.R
 import com.example.netflix.databinding.FragmentFavoriteBinding
 
 class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
@@ -32,13 +31,12 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val nav: FavoriteFragmentArgs by navArgs()
+        val nav:FavoriteFragmentArgs by navArgs()
 
         recyclerView = view.findViewById(R.id.favoriteFragment)
         recyclerView.layoutManager = GridLayoutManager(view.context,3)
 
         viewmodel.favorite()
-        Log.d(TAG, "onViewCreated: "+viewmodel.favorite().size)
         val adapter = Myadapter(viewmodel.favorite()){
             Toast.makeText(requireContext(),"${it.moviename}is liked" , Toast.LENGTH_SHORT).show()
         }

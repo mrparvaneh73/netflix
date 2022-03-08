@@ -1,8 +1,6 @@
-package com.example.netflix
+package com.example.netflix.ui.comingsoon
 
-import android.app.Notification.EXTRA_TEXT
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -10,8 +8,8 @@ import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import com.example.netflix.R
 import kotlinx.android.synthetic.main.fragment_comingsoon.*
-import java.net.URI
 
 class ComingSoonFragment:Fragment(R.layout.fragment_comingsoon), View.OnClickListener {
     private lateinit var activityResultLauncher: ActivityResultLauncher<Intent>

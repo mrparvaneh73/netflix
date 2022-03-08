@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.data
 
 import okhttp3.MultipartBody
 import okhttp3.ResponseBody

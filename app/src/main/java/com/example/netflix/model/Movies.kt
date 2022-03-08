@@ -1,4 +1,4 @@
-package com.example.netflix
+package com.example.netflix.model
 
 import android.widget.ImageButton
 import androidx.fragment.app.activityViewModels

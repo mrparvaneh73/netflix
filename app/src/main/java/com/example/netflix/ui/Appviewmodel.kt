@@ -1,7 +1,8 @@
-package com.example.netflix
+package com.example.netflix.ui
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.netflix.R
+import com.example.netflix.model.Movies
 
 class Appviewmodel:ViewModel() {
     var isliked= mutableListOf<Boolean>()
@@ -11,7 +12,7 @@ class Appviewmodel:ViewModel() {
     lateinit var movies: Movies
 
     lateinit var moviesArrayList: ArrayList<Movies>
-    lateinit var favoritmoviesArrayList: ArrayList<Movies>
+
 
 
 init {
@@ -31,7 +32,7 @@ init {
         }
         moviesArrayList= arrayListOf()
         for (i in movieId.indices){
-            movies=Movies(movieId[i],moviename[i],likebuttom[i],isliked[i])
+            movies= Movies(movieId[i],moviename[i],likebuttom[i],isliked[i])
             moviesArrayList.add(movies)
         }
 

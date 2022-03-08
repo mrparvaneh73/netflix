@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.example.netflix.Appviewmodel"/>
+        <import type="com.example.netflix.ui.Appviewmodel"/>
         <variable
             name="moviess"
-            type="com.example.netflix.Appviewmodel" />
+            type="com.example.netflix.ui.Appviewmodel" />
         <variable
             name="image"
-            type="Appviewmodel" />
+            type="com.example.netflix.ui.Appviewmodel" />
     </data>
 
     <androidx.cardview.widget.CardView
